@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yango Nepal - Guru G</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Slider animation */
+    .slider {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      height: 70vh;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <header class="bg-red-600 text-white shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">YANGO NEPAL - GURU G</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-gray-200">Home</a>
+        <a href="contact.html" class="hover:text-gray-200">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Slider -->
+  <section class="relative overflow-hidden">
+    <div id="slider" class="slider">
+      <img src="office1.jpeg" alt="Office 1" class="slide">
+      <img src="office2.jpg" alt="Office 2" class="slide">
+      <img src="office3.jpeg" alt="Office 3" class="slide">
+      <img src="office4.jpg" alt="Office 4" class="slide">
+    </div>
+    <!-- Overlay logo and title -->
+    <div class="absolute inset-0 flex flex-col justify-center items-center bg-black/40 text-white">
+      <img src="logo.png" alt="Yango Guru G Logo" class="w-32 mb-4">
+      <h2 class="text-4xl font-bold">Welcome to Yango Nepal - Guru G</h2>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="max-w-5xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-red-600 mb-6">About Us</h2>
+    <p class="text-lg text-gray-700 leading-relaxed text-center mb-8">
+      Yango Nepal – Guru G is dedicated to providing the best support for Yango riders and drivers.  
+      Our services are designed to make ride-sharing easy, transparent, and profitable.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Driver Registration -->
+      <div class="bg-red-50 p-6 rounded-xl shadow">
+        <h3 class="text-xl font-bold text-red-600 mb-2">Driver Registration</h3>
+        <p class="mb-4">We help drivers register and get started on Yango quickly and efficiently.</p>
+        <a href="https://forms.fleet.yango.com/forms?specification=taxi&ref_id=f3d69dd57dba4dc6a4b8260df0709cbf" target="_blank" 
+           class="inline-block bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition">
+          🚖 Click to Register
+        </a>
+      </div>
+
+      <!-- Training -->
+      <div class="bg-red-50 p-6 rounded-xl shadow">
+        <h3 class="text-xl font-bold text-red-600 mb-2">Training & Support</h3>
+        <p>Our team provides full training and 24/7 ongoing support to ensure smooth operations.</p>
+      </div>
+
+      <!-- Goal Bonus -->
+      <div class="bg-red-50 p-6 rounded-xl shadow">
+        <h3 class="text-xl font-bold text-red-600 mb-2">Goal Bonus & Incentives</h3>
+        <p>Instant payout of daily earinings and bonuses via Khalti or Banks.</p>
+      </div>
+
+     <!-- Customer Service -->
+    <div class="bg-red-50 p-6 rounded-xl shadow">
+    <h3 class="text-xl font-bold text-red-600 mb-2">Customer Service</h3>
+    <p class="mb-4">Any issues? Visit our office or contact us—we’re here to help every step of the way.</p>
+    <a href="contact.html" 
+       class="inline-block bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition">
+      📞 Contact Us
+    </a>
+  </div>
+  
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-red-600 text-white py-6 text-center">
+    <p>© 2025 Yango Nepal - Guru G. All rights reserved.</p>
+  </footer>
+
+  <!-- Slider Script -->
+  <script>
+    const slider = document.getElementById('slider');
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }, 4000); // 4 seconds per slide
+  </script>
+
+</body>
+</html>
